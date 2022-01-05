@@ -17,7 +17,6 @@ export function renderTodo(todo) {
     // append stuff 
     todoDiv.append(todoP);
 
-
     // return the div
     return todoDiv;
 }

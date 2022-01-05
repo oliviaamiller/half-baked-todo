@@ -6,6 +6,7 @@ import {
     logout,
     deleteAllTodos, 
 } from '../fetch-utils.js';
+
 import { renderTodo } from '../render-utils.js';
 
 checkAuth();
@@ -29,17 +30,21 @@ todoForm.addEventListener('submit', async(e) => {
     todoForm.reset();
 
     //display the todos
-    renderTodo(newTodo);
+    displayTodos(newTodo);
 });
 
 async function displayTodos() {
     // fetch the todos
+    const todos = await getTodos();
     
     // display the list of todos
+    renderTodo(todos);
 
     // be sure to give each todo an event listener
-
     // on click, complete that todo
+    todosEl.addEventListener('click', async() => {
+        await completeTodo();
+    });
 }
 
 // add an on load listener that fetches and displays todos on load
@@ -51,6 +56,10 @@ logoutButton.addEventListener('click', () => {
 
 deleteButton.addEventListener('click', async() => {
     // delete all todos
+    await deleteAllTodos();
 
     // then refetch and display the updated list of todos
+    const deletedTodos = await getTodos();
+
+    displayTodos(deletedTodos);
 });
