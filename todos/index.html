@@ -15,16 +15,28 @@
 
 <body> 
     <main class="todos-main">
-        <h3>To Do List</h3>
-        <button id="logout">Logout</button>
-        <form class="todo-form">
-            <input name="todo" required />
-            <button>Add To Do</button>
-        </form>
-        <button class="delete-button">Delete all To Dos?</button>
-        <div class="todos">
-
-        </div>
+        <section class="top">
+            <div class="top-left">
+                <button class="delete-button">Delete all To Dos?</button>
+            </div>
+            <div class="top-center">
+                <h3>To Do List</h3>
+                <form class="todo-form">
+                    <input name="todo" required />
+                    <button>Add To Do</button>
+                </form>
+            </div>
+            <div class="top-right">
+                <button id="logout">Logout</button>
+            </div>
+            
+            
+            
+        </section>
+        <section class="bottom">
+            <div class="todos">
+            </div>
+        </section>
     </main>
     <script type="module" src="./todos.js"></script>
 </body>
