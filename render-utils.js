@@ -1,4 +1,5 @@
 export function renderTodo(todo) {
+
     // create a div and a p tag
     const todoDiv = document.createElement('div');
     const todoP = document.createElement('p');
