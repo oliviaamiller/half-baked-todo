@@ -9,12 +9,33 @@ html, body {
     margin: 0;
 }
 
+@keyframes pulse {
+    0% {
+        color: rgb(255, 148, 198);
+    }
+    50% {
+        color: rgb(255, 226, 112);
+    }
+    100% {
+        color: rgb(140, 221, 255);
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: pulse 10s infinite alternate;
+    font-size: 2rem;
+}
+
+
 .todos-main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    border: red 1px solid;
+    border: rgb(131, 128, 128) 1px solid;
     margin: 20px 40px;
     
 }
@@ -26,7 +47,7 @@ html, body {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    padding-bottom: 5px;
 }
 
 .top-left {
@@ -43,6 +64,28 @@ html, body {
     margin-right: 15px;
 }
 
+hr {
+    background-color:rgb(131, 128, 128);
+    border: none;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+
+}
+
+button {
+    background-color: white;
+    border: rgb(131, 128, 128) solid 1px;
+    padding: 3px 8px;
+    cursor: pointer;
+
+}
+
+input {
+    padding: 2px;
+}
+
+
 .bottom {
     display: flex;
     flex-direction: column;
@@ -57,3 +100,4 @@ html, body {
     text-decoration: line-through;
     opacity: 30%;
 }
+
